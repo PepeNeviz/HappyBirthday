@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="HBD.css">
+	<script src="https://kit.fontawesome.com/b0f29e9bfe.js" crossorigin="anonymous"></script>
+	<title>Happy Birthday</title>
+</head>
+<body>
+	<div id="loading1">
+		<div class="opening1">
+			<h1 id="text1"></h1>
+			<img id="img1" src="Assets/Mewing.jpg" alt="" width="100px">
+		</div>
+	</div>
+	
+	<div id="loading2">
+		<div class="opening2">
+			<h1 id="text2"></h1>
+		</div>
+	</div>
+
+	<div id="main-content" class="main-content" style="display: none;">
+		
+		<nav>
+
+			<input type="checkbox" id="sidebar-active">
+        		<label for="sidebar-active" class="open-sidebar-button">
+        	    	<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+        		</label>
+
+        	<label id="overlay" for="sidebar-active"></label>
+        		<div class="links-container">
+        	    	<label for="sidebar-active" class="close-sidebar-button">
+        	        	<svg xmlns="http://www.w3.org/2000/svg" height="32px" viewBox="0 -960 960 960" width="32px" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
+        	    	</label>
+
+			<div class="link-container">
+				<button class="ToggleBtn" onclick="navigate('home')">Home</button>
+				<button class="ToggleBtn" onclick="navigate('photo')">Photo</button>
+				<button class="ToggleBtn" onclick="navigate('pesan')">Pesan</button>
+				<button class="ToggleBtn" onclick="navigate('credit')">Credit</button>
+			</div>
+
+		</nav>
+	
+		<div id="home" class="page active">
+			<div class="judul-home">
+				<h1>Happy Birthday lek</h1>
+				<p>Gw bikin website ini buat lu yang ulang tahun (Sekalian belajar juga sih🗿), pokoknya panjang umur lah, moga aja lu bisa jadi apa yang lu mau dan anu, terimakasih juga telah menemani hidup gw yak, gw seneng banget, walau gw kadang aneh atau apapun itu sorry, sorry juga kalo jelek soalnya gw bikin dari tanggal 1 jir lah, gw jadi kaga belajar🗿, soo gw harap lu suka. Thank you! (Play musiknya om)</p>
+			</div>
+
+			<div class="gif">
+				<audio controls>
+					<source src="Assets/laguhbd.mp3" type="audio/mpeg">
+					Browser lu nggak support tag audio.
+				</audio>
+				<img src="Assets/giphy.webp" alt="gif" width="500px">
+			</div>
+
+		</div>
+	
+		<div id="photo" class="page">
+			<div class="judul-photo">
+				<h1>Photo</h1>
+				<p>Photo yang saya ambil selama kita sekelas.</p>
+			</div>
+
+			<!-- Previous Button -->
+	<button id="prev-btn">
+		<i class="left"><strong>Back</strong></i>
+	</button>
+
+
+	<!-- Book -->
+	<div id="book" class="book">
+		<!-- Paper 1 -->
+		<div id="p1" class="paper">
+			<div class="front">
+				<div id="f1" class="front-book">
+					<img src="Assets/Mewing.jpg" alt="" width="120px">
+					<div class="judul-buku-depan">
+						<h1>Rifqi Journey</h1>
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div id="b1" class="back-content">
+					<div class="row">
+						<img src="Assets/isi1-9,16.jpg" alt="Sample Image" id="zoomImg" width="120px">
+						<img src="Assets/isi2-9,16.jpg" alt="Sample Image" id="zoomImg" width="120px">
+					</div>
+					<div class="row">
+						<img src="Assets/isi3-9,16.jpg" alt="Sample Image" id="zoomImg" width="120px">
+						<img src="Assets/isi4-9,16.jpg" alt="Sample Image" id="zoomImg" width="120px">
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<!-- Paper 2 -->
+		<div id="p2" class="paper">
+			<div class="front">
+				<div id="f2" class="front-content">
+					<div class="row">
+						<img src="Assets/isi1-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi2-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+					<div class="row">
+						<img src="Assets/isi3-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi4-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+					<div class="row">
+						<img src="Assets/isi5-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi6-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+				</div>
+			</div>
+			<div class="back">
+				<div id="b2" class="back-content">
+					<div class="row">
+						<img src="Assets/isi7-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi8-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+					<div class="row">
+						<img src="Assets/isi9-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi10-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+					<div class="row">
+						<img src="Assets/isi11-miring.jpg" alt="" id="zoomImg" width="120px">
+						<img src="Assets/isi12-miring.jpg" alt="" id="zoomImg" width="120px">
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Paper 3 -->
+		<div id="p3" class="paper">
+			<div class="front">
+				<div id="f3" class="front-content">
+					<h1>Tamatt....</h1>
+				</div>
+			</div>
+			<div class="back">
+				<div id="b3" class="back-book">
+					<img src="Assets/End-book.jpg" alt="" width="210px">
+					<h2>Book by:Ziven Larendra</h2>
+					<h2>Kenapa kebalik bang? pasti kebaca juga kok (Malaz benerin bug)</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Next Button -->
+	<button id="next-btn">
+		<i class="right"><strong>Next</strong></i>
+	</button>
+
+	<div class="note">
+		<p>Note:Recomend di laptop,di hp ngebug + males benerin <br> ☆*: .｡. o(≧▽≦)o .｡.:*☆</p>
+	</div>
+
+		</div>
+	
+		<div id="pesan" class="page">
+			<div class="all-pesan">
+				<div class="judul-pesan">
+					<h1>Pesan dari kawan-kawan</h1>
+				</div>
+	
+				<div class="isi-pesan">
+					<h2>Jipepeng</h2>
+					<h4>Oi Tua</h4>
+				</div>
+				
+				<div class="isi-pesan">
+					<h2>Muto</h2>
+					<h4>😶😶🥳🥳</h4>
+				</div>
+
+				<div class="isi-pesan">
+					<h2>El flicker depan</h2>
+					<h4>Sehat terus bang yujongg kuhh</h4>
+				</div>
+
+				<div class="isi-pesan">
+					<h2>Kuch IAM</h2>
+					<h4>Sehat sehat ripki</h4>
+				</div>
+
+				<div class="isi-pesan">
+					<h2>Kelinci yg imut tapi mematikan</h2>
+					<h4>HBD KI semoga panjang umur pendek napas, semoga cita-citanya terkabul dan hari-harinya menyenangkan.</h4>
+				</div>
+
+				<div class="isi-pesan">
+					<h2>Jibun</h2>
+					<h4>Hbd pak Yu Zhong 🎉, semoga  panjang umur dan sehat selalu biar nanti bisa jadi naga beneran sama jadi top global 1 Yu Zhong</h4>
+				</div>
+
+				<div class="isi-pesan">
+					<h2>Windah</h2>
+					<h4>yu Zhong ternyata bisa nambah umur gaiss, semoga yang di semogakan tersemogakan.., aamiin 🤲🏻🤲🏻 | semoga yu Zhong nya makin  jago, madep, mantaap well 😭, tapii jangan smpe jadi manusia setengah yu Zhong, soalnya bisi nnti bisa berubah jdi naga terbang" 🤲🏻					</h4>
+				</div>
+
+			</div>
+
+		</div>
+	
+		<div id="credit" class="page">
+			<h1>Gw doang sih yang bikin🗿</h1>
+		</div>
+
+	</div>
+
+	<script src="HBD.js"></script>
+</body>
+</html>

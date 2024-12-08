@@ -1,0 +1,386 @@
+html {
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #F9F7E4;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.opening1, .opening2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 2vh;
+    flex-direction: column;
+    flex: 1; /* Biar mengambil sisa tinggi layar */
+}
+
+.opening1 h1, .opening2 h1 {
+    border-right: 2px solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.opening1 h1.typing, .opening2 h1.typing {
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+#loading1 img {
+    display: none; /* Sembunyiin gambar awalnya */
+    opacity: 0; /* Sembunyiin gambar dengan opacity */
+    transition: opacity 1s ease-in-out; /* Tambahin transition buat animasi */
+}
+
+#loading1 img.show {
+    display: block; /* Tampilkan gambar */
+    opacity: 1; /* Bikin gambar full visible */
+}
+
+@keyframes blink-caret {
+    from { border-color: transparent; }
+    to { border-color: black; }
+}
+
+nav {
+    background-color: #122D4F;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: sticky;
+}
+
+#sidebar-active {
+    display: none;
+}
+
+.open-sidebar-button, .close-sidebar-button {
+    display: none;
+    cursor: pointer;
+}
+
+nav svg {
+    color: black;
+}
+
+@media(max-width: 472px) {
+    .opening1,
+    .opening2 {
+        font-size: 0.7em;
+    }
+
+    .judul-home {
+        font-size: 0.7em;
+    }
+
+    .gif img {
+        width: 350px;
+    }
+
+    .judul-photo h1 {
+        font-size: 1.4em;
+    }
+
+    .judul-photo p {
+        font-size: 0.9em;
+        margin: 15px 0 0 0;
+    }
+
+    .book {
+        width: 250px; /* Sesuaikan dengan ukuran yang lebih kecil */
+        height: 350px; /* Sesuaikan dengan ukuran yang lebih kecil */
+        margin-left: -30%; /* Adjust margin untuk mobile */
+    }
+
+    .front-book img,
+    .back-book img {
+        width: 250px; /* Sesuaikan dengan ukuran yang lebih kecil */
+        height: 350px; /* Sesuaikan dengan ukuran yang lebih kecil */
+    }
+
+    i {
+        font-size: 30px; /* Sesuaikan dengan ukuran yang lebih kecil */
+    }
+
+    #photo button {
+        margin-left: 0; /* Adjust margin untuk mobile */
+    }
+
+    .judul-buku-depan {
+        padding: 90px 0 0 0; /* Adjust padding untuk mobile */
+    }
+
+    .judul-photo {
+        font-size: 1.5em; /* Sesuaikan dengan ukuran yang lebih kecil */
+    }
+
+    .left,
+    .right {
+        margin-left: 90px;
+    }
+}
+
+.link-container {
+    display: flex;
+    width: 100%;
+}
+
+.links-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ToggleBtn {
+    color: white;
+    padding: 18px 24px; 
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    flex-grow: 1; /* Tombol mengambil ruang yang sama */
+    text-align: center; 
+}
+
+.ToggleBtn:hover {
+    background-color: #0e233d;
+}
+
+.page {
+    display: none;
+    padding: 20px;
+    margin: 20px;
+    background-color: #F9F7E4;
+    border-radius: 5px;
+}
+
+.page.active {
+    display: block;
+}
+
+/*home*/
+#home h1 {
+    margin: -10px 0 20px 0;
+    font-size: 4em;
+}
+
+#home p {
+    font-size: 2em;
+}
+
+#home img {
+    margin: 25px 0 0 0;
+}
+
+/* Book */
+
+.book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    height: 500px;
+    transition: transform 0.5s;
+    flex-direction: row;
+    margin-left: 38%;
+}
+
+.paper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.front,
+.back {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.front {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid powderblue;
+}
+
+.back {
+    z-index: 0;
+}
+
+.front-content,
+.back-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.back-content {
+    transform: rotateY(180deg)
+}
+
+/* Paper flip effect */
+.flipped .front,
+.flipped .back {
+    transform: rotateY(-180deg);
+}
+
+/* Controller Buttons */
+#photo button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 10px;
+    transition: transform 0.5s;
+    margin-left: 46%;
+}
+
+button:focus {
+    outline: none;
+}
+
+button:hover i {
+    color: #636363;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+/* Paper stack order */
+#p1 {
+    z-index: 3;
+}
+
+#p2 {
+    z-index: 2;
+}
+
+#p3 {
+    z-index: 1;
+}
+
+.front-book img {
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    filter: blur(2px);
+}
+
+.back-book img {
+    width: 350px;
+    height: 500px;
+    position: absolute;
+}
+
+.back-book h2 {
+    z-index: 100;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.front-book h1, .front h3 {
+    z-index: 100;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    color: deeppink;
+}
+
+.judul-buku-depan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 125px 0 0 0;
+}
+
+.back-content img,
+.front-content img{
+    margin: 15px;
+}
+
+.back-content,
+.front-content {
+    position: relative;
+}
+
+.back-content,
+.front-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.judul-photo {
+    font-size: 2.1em;
+}
+
+#zoomImg {
+    max-width: 100%;
+    cursor: pointer;
+    transition: transform 0.2s; /* Smooth zoom effect */
+    margin: 15px;
+}
+
+#zoomImg:hover {
+    transform: scale(1.2);
+}
+
+.judul-pesan {
+    font-size: 1.5em;
+    margin: 0 0 25px 0;
+}
+
+.isi-pesan h2{
+    margin: 15px 0 10px 15px;
+}
+
+.isi-pesan h4 {
+    margin: 15px 0 10px 15px;
+}
+
+.isi-pesan {
+    border: black 2px solid;
+    margin: 10px 0;
+}
+
+.note {
+    margin: 20px 0 0 0;
+    font-size: 1.2em;
+}
